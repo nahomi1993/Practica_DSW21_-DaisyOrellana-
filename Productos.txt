@@ -1,0 +1,24 @@
+data class Producto(
+    val nombre: String,
+    val precio: Double,
+    val estado: String,
+    val promocion: String?
+)
+
+fun main() {
+    val listProduct = listOf(
+        Producto("Laptop", 250.0, "Nueva", "50% de descuento"),
+        Producto("Iphone 13 Pro", 350.0, "Usado", "15% de descuento"),
+        Producto("AirPods", 150.0, "Usados", "")
+    )
+
+    println(listProduct[1])
+
+    val precioPromedio = (
+        listProduct[0].precio +
+        listProduct[1].precio +
+        listProduct[2].precio
+    ) / 3
+
+    println("El precio promedio es: $precioPromedio")
+}
